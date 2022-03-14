@@ -1,0 +1,294 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Anthony L}{Pane}{ \urlstyle{same}\href{https://www.linkedin.com/in/paneanthony/}{linkedin.com/in/paneanthony}\\
+\href{mailto:alpane19@gmail.com}{alpane19@gmail.com} | 631.566.8353
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Stony Brook University}
+\descript{B.S. in Computer Science}
+\location{May 2002 | Stony Brook, NY}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Soft Skills}
+Teamwork \\
+Leadership \\
+Problem-solving \\
+Communication \\
+Attention to detail \\
+Adaptability \\
+Mentorship \\
+\sectionsep
+
+\subsection{Strategic}
+Clean Code \\
+Domain Driven Design (DDD) \\
+API Design: REST/Hypermedia \\
+Microservices/Architecture \\
+Agile: Scrum/Kanban \\
+User Story Writing/Decomposition \\
+Continuous Integration/Deployment \\
+Design Patterns \\
+Test Driven Development (TDD) \\
+Functional Programming \\
+Extreme Programming (XP) \\
+\sectionsep
+
+\subsection{Programming/Tools}
+\location{Proficient:}
+Java \textbullet{} Spring \textbullet{} Hibernate \textbullet{} SQL \\
+JavaScript \textbullet{} TypeScript \textbullet{} HTML \\ 
+React/Redux \textbullet{} Groovy \textbullet{} Spock \\
+JSON/HAL \textbullet{} Sonar \textbullet{} Jenkins \textbullet{} GIT \\
+ActiveMQ \textbullet{} Gradle \textbullet{} Jest \\
+\location{Familiar:}
+CSS \textbullet{} Scala \textbullet{} NoSQL
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{UniFocus Awards} 
+\begin{tabular}{rll}
+2011	     & Growth and Learning\\
+2009	     & Team Excellence\\
+2008	     & Growth and Learning\\
+2007     & Innovation  \\
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{UniFocus}
+\descript{| Principal Application Architect }
+\location{August 2006 - Present | Denver, CO}
+Drive the ability to efficiently and expertly create robust and maintainable product for 7 teams/45 staff located in the US, India, and Croatia.
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Facilitate professional development of engineering and continue evolving the culture into a growth-oriented mindset.
+\item Liaison between application development and architecture to ensure product infrastructure development is properly prioritized, implemented and delivered.
+\item Recommend, evaluate, and oversee the implementation of toolsets, processes, or other technologies that directly impact product development.
+\item Work with teams to design/train/advise/code on major technical design processes and initiatives.
+\item Liaison between development and security/devops teams to ensure code analysis is being performed and reacted to accordingly.
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Recent Projects}
+\runsubsection{Gratuity - Digital Tipping}
+\descript{| Principal Application Architect}
+\location{Java, Spring, React, SQL | Teams: India, US}
+Provide a cashless option for hotel guests to tip employees in order to increase employee satisfaction and retention.  
+\begin{tightemize}
+\item Analyzed requirements to create context map and visualize integration points using Domain Driven Design techniques resulting in two new bounded contexts.
+\item Review UX designs to determine technical requirements and flow.
+\item Design system to integrate with existing Tip Pooling features as well as future planned 'direct to employee' and 'bill to guest folio' options.
+\item Negotiate, compromise, and prioritize initial feature set to ensure delivery of working product for demo and pilot phases.
+\item Review and select payment processing solutions.  Review and select integration options to reduce PCI compliance risk.
+\item Work with architecture and platform team to establish infrastructure, security, and delivery pipeline requirements.
+\item Pair program and review code for defects and standards.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Sonar OWASP Mitigation}
+\descript{| Principal Application Architect}
+\location{Java, Sonar, Gradle | Teams: US, India, Croatia, Architecture}
+Use static code analysis tools to target known OWASP vulnerabilities across all projects leading to a 90\% reduction in targeted vulnerabilities through the first phase.
+\begin{tightemize}
+\item Work with architecture team to update standard Gradle builds to include Sonar analysis.
+\item Prioritize detected issues with Security team.
+\item Research and train team leads on mitigation techniques for prioritized items.
+\item Work with project planning to schedule mitigation work in monthly time allotments for each team.
+\item Track and report progress of initiative to Security team.
+\end{tightemize}
+\sectionsep
+
+\end{minipage}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Anthony L}{Pane}{ \urlstyle{same}\href{https://www.linkedin.com/in/paneanthony/}{linkedin.com/in/paneanthony}\\
+\href{mailto:alpane19@gmail.com}{alpane19@gmail.com} | 631.566.8353
+}
+
+\hfill
+\begin{minipage}[t]{1.0\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS - Continued
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Recent Projects - Continued}
+\runsubsection{User Engagement}
+\descript{| Principal Application Architect}
+\location{Java, Spring, React, ActiveMQ, SQL | Teams: India, US}
+Promote desired user behaviors in order to streamline and improve labor management processes, resulting in higher service quality, employee loyalty and increased business revenues.{ \urlstyle{same}\href{https://www.unifocus.com/newsroom/industry-first-workforce-mgmt-motivation-engagement-with-gamification-capabilities}{Press Release}}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Analyzed requirements to create context map and visualize integration points using Domain Driven Design techniques resulting in three new bounded contexts.
+\item Review UX designs to determine technical requirements and flow.
+\item Analyzed requirement dependencies in order to decompose and prioritize user stories while minimizing bottlenecks. 
+\item Work with architecture team to design and implement Domain Event pub/sub infrastructure using the Outbox pattern to support the applications event driven design.
+\item Work with architecture and platform team to establish infrastructure, security, and delivery pipeline requirements.
+\item Facilitate api and event work required from upstream bounded contexts spread across three additional teams.
+\item Pair program and review code for defects and standards.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{RMS Modularization}
+\descript{| Principal Application Architect}
+\location{Java, Spring, React | Teams: US, Architecture}
+Modularize the UniFocus 1.7 million line legacy application into microservices using Domain Driven Design and microservice design best practices.
+\begin{tightemize}
+\item Research and procure training material for Domain Driven Design and Microservices.
+\item Create and facilitate developer discussion groups to mentor/train the development staff on required techniques.
+\item Work with team leads to analyze the legacy schema consisting of 475 tables in order to assign team and bounded context ownership. 
+\item Work with team developers to refactor code into 80+ bounded context modules.
+\item Work with team developers to establish appropriate aggregate roots to maintain proper transactional boundaries and invariants. 
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Swing to React Conversion}
+\descript{| Principal Application Architect}
+\location{Java, React | Teams: US, Croatia, India, Architecture}
+Convert legacy Swing UI screens into modularized React applications in order to increase product marketability.
+\begin{tightemize}
+\item Research and procure training material for TypeScript, React, and Jest.
+\item Establish UniFocus coding standards for React/Typescript.
+\item Work with architecture on infrastructure and tooling requirements around town planning concerns such as common error handling and reporting, localization, and security.
+\item Create and facilitate developer discussion groups to mentor/train the development staff on required techniques.
+\item Create wrapper to enable AG-Grid third party tool to meet UniFocus needs for validation, typescript typings, ease of use, look and feel, and support for common grid cell types.
+\item Provide technical support for teams during conversion of 80+ screens and communication for any technical nuances/patterns to maintain developer productivity.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Time and Attendance}
+\descript{| Team Lead, Domain Expert}
+\location{Java, React | Teams: US}
+Track employee time, reduce labor costs, and maintain compliance to labor laws and union contracts for over 450k employees around the globe.
+\begin{tightemize}
+\item Responsible for all design and code since inception. 
+\item Primary technologies include React, TypeScript, Java, Spring, Hibernate, Spock, SQL
+\item Lead team of 3 developers and 1 QA
+\item Physical and mobile time clocks with biometric interfaces, punch rules and restrictions.
+\item Business rules engine for real time payroll calculations in full compliance with federal, state, corporate and union rules.
+\item Time card management, attendance point tracking, benefit accruals, payroll interfaces, tip pooling calculation and distribution, overtime and violations alerting. 
+\end{tightemize}
+\sectionsep
+
+\end{minipage} 
+ 
+\end{document}  \documentclass[]{article}
